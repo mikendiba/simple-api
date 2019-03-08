@@ -20,7 +20,7 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "get_app"
       </tr>
     </table>
     <br />
-    <a href="http://localhost/simple_api/REST_Client.php?action=get_app_list" alt="app list">Return to the app list</a>
+    <a href="http://localhost/simple_api/index.php?action=get_app_list" alt="app list">Return to the app list</a>
   <?php
 }
 else // else take the app list
@@ -31,7 +31,7 @@ else // else take the app list
    <ul>
     <?php foreach ($app_list as $app): ?>
       <li>
-        <a href=<?php echo "http://localhost/simple_api/REST_Client.php?action=get_app&id=" . $app["id"]  ?> alt=<?php echo "app_" . $app_["id"] ?>><?php echo $app["name"] ?></a>
+        <a href=<?php echo "http://localhost/simple_api/index.php?action=get_app&id=" . $app["id"]  ?> alt=<?php echo "app_" . $app_["id"] ?>><?php echo $app["name"] ?></a>
     </li>
     <?php endforeach; ?>
     </ul>
